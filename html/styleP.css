@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+* {
+    font-family: "Roboto", monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainFont {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+header {
+    width: 100%;
+    background-color: #d6e4ed;
+    margin: 0;
+    box-shadow: 0px 10px 19px -5px rgba(0, 0, 0, 0.2);
+    height: 90px;
+}
+
+.headerContent {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #030e3a;
+}
+
+
+.name {
+    font-family: "Dancing Script", cursive;
+    margin: 20px 0;
+    font-size: 40px;
+    font-weight: 700;
+    color: #131e6c;
+}
+
+main {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+h2 {
+    margin: 50px 0;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-weight: 300;
+    width: 1550px;
+}
+.container .painting {
+    width: 1000px;
+    margin: 0 20px 50px 0;
+}
+.container p {
+    padding: 5px 0;
+}
+
+footer {
+    background-color: #46505e;
+    margin: 0;
+    height: 250px;
+    width: 100%;
+}
+
+.footerName {
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0 10px 0;
+    border-bottom: 1px solid #fff;
+    height: 110px;
+    padding: 20px 0;
+}
+.footerName .name {
+    color: #131e6c;
+}
+
+.contacts {
+    margin: 20px 50px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.contacts p {
+    text-align: center;
+}
+.contacts a {
+    color: #fff;
+    text-decoration: underline;
+}
+.contacts a:hover {
+    color: rgba(159, 169, 222, 0.96);
+    text-decoration: none;
+}
+
+.navbarName {
+    display: inline-block;
+    width: 200px;
+    justify-self: end;
+    margin: 20px;
+    color: #d6e4ed;
+    border-left: 4px solid #131e6c;
+    border-radius: 0 5px 5px 0;
+    background: #7888d9;
+    padding: 15px 20px;
+}
+
+.navbarName:hover, .dropdown ul li:hover {
+    background: #7888d9;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    position: relative;
+}
+.navbar .drop {
+    width: 100%;
+    background: rgba(159, 169, 222, 0.96);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 20px 19px -11px rgba(0, 0, 0, 0.25);
+}
+.navbar .dropContent {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+.navbar input {
+    display: none;
+}
+.navbar input ~ ul {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+}
+.navbar input:checked ~ ul {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+}
+.navbar ul li {
+    display: inline-block;
+    padding: 20px;
+    color: #7888d9;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.animate {
+    transition: all 0.3s;
+    backface-visibility: hidden;
+}
+
+@media screen and (max-width: 1199px) {
+    .headerContent {
+        width: 700px;
+    }
+    .dropContent {
+        width: 700px;
+    }
+    .footerName {
+        width: 700px;
+    }
+
+    main {
+        width: 700px;
+        justify-content: center;
+    }
+    main .container {
+        width: 700px;
+    }
+    main .container .painting {
+        width: 700px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .headerContent {
+        width: 560px;
+    }
+    .headerContent .name {
+        margin: 20px 0 20px -120px;
+    }
+    .dropContent {
+        width: 560px;
+    }
+
+    footer {
+        height: 350px;
+    }
+    .footerName {
+        width: 560px;
+    }
+
+    main {
+        width: 560px;
+        justify-content: center;
+    }
+    main .container {
+        width: 560px;
+    }
+    main .container .painting {
+        width: 560px;
+    }
+}
